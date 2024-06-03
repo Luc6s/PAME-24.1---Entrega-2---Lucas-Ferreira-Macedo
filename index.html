@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Fluxo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h1>Fluxo</h1>
+        </div>
+        <div class="right-side">
+            <div class="login-box">
+                <div class="header">
+                    <h1>FluxoSocial</h1>
+                    <p>It's happening now!</p>
+                </div>
+                <form id="loginForm">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    <div class="options">
+                        <a href="#">Esqueceu sua senha?</a>
+                        <label>
+                            <input type="checkbox" name="remember"> Lembrar-me
+                        </label>
+                    </div>
+                    <button type="submit">Entrar</button>
+                    <div class="social-login">
+                        <button>Entrar com Google</button>
+                        <button>Entrar com Apple</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            alert(`Email: ${email}\nSenha: ${password}`);
+        });
+    </script>
+</body>
+</html>
