@@ -29,6 +29,14 @@ body {
     margin-left: 20px;
 }
 
+.logo h2 {
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 750px;
+    color: rgb(239, 96, 0);
+}
+
 .container {
     display: flex;
     width: 100%;
@@ -63,13 +71,13 @@ body {
     background: none;
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
-    text-align: center;
+    width: 400px;
+    text-align: left;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 54px;
     color: #f76c00;
     font-family: 'Poppins', sans-serif;
 }
@@ -138,7 +146,7 @@ button:hover {
 }
 
 .social-login button img {
-    margin-right: 9px;
+    margin-right: 10px;
 }
 
 .social-login button:hover {
