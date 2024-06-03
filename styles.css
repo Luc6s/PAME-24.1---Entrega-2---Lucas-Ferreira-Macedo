@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: #1c1c1c url('background-image.jpg') no-repeat center center fixed;
+    background: #1c1c1c;
     background-size: cover;
 }
 
@@ -24,10 +24,19 @@ body {
     align-items: center;
 }
 
-.left-side h1 {
+.stylized-text {
     font-size: 80px;
     color: white;
     margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .right-side {
@@ -49,10 +58,12 @@ body {
     margin: 0;
     font-size: 24px;
     color: #f76c00;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header p {
-    color: #f76c00;
+    font-size: 18px;
+    color: #000000;
 }
 
 form {
@@ -87,6 +98,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
 button:hover {
@@ -97,8 +109,9 @@ button:hover {
     margin-top: 10px;
     background-color: #ccc;
     color: black;
+    font-family: 'Poppins', sans-serif;
 }
 
-social-login button:hover {
+.social-login button:hover {
     background-color: #bbb;
 }
