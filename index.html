@@ -8,15 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header-bar">
+        <div class="logo">
+            <img src="nova_logo.png" alt="Logo Social Fluxo">
+            <h1 class="social-fluxo">FluxoSocial</h1>
+        </div>
+    </header>
     <div class="container">
         <div class="left-side">
-            <h1 class="stylized-text">Fluxo</h1>
+            <div class="login-text">
+                Faça seu login!
+            </div>
+            <img src="Pre-Capa.png" alt="Descrição da imagem" class="left-image">
         </div>
         <div class="right-side">
             <div class="login-box">
                 <div class="header">
                     <h1>FluxoSocial</h1>
-                    <p></p>
+                    <p>It's happening now!</p>
                 </div>
                 <form id="loginForm">
                     <label for="email">Email</label>
@@ -26,13 +35,19 @@
                     <div class="options">
                         <a href="#">Esqueceu sua senha?</a>
                         <label>
-                            <input type="checkbox" name="remember"> Lembrar-me
+                            <input type="checkbox" name="remember"> Lembre-se de mim
                         </label>
                     </div>
                     <button type="submit">Entrar</button>
                     <div class="social-login">
-                        <button>Entrar com Google</button>
-                        <button>Entrar com Apple</button>
+                        <button>
+                            <img src="google_logo.png" alt="Google Logo" width="20">
+                            Entrar com Google
+                        </button>
+                        <button>
+                            <img src="apple_logo.png" alt="Apple Logo" width="20">
+                            Entrar com Apple
+                        </button>
                     </div>
                 </form>
             </div>
@@ -43,7 +58,7 @@
             event.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            alert(`Email: ${email}\nSenha: ${password}`);
+            alert(`Email: ${email}\\nSenha: ${password}`);
         });
     </script>
 </body>

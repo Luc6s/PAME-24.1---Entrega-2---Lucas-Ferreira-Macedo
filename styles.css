@@ -1,12 +1,32 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: #1c1c1c;
+    overflow-x: hidden;
+    background: #1c1c1c url('Foto_Fluxo.png') no-repeat center center fixed;
     background-size: cover;
+    backdrop-filter: grayscale(100%) blur(4px) brightness(40%);
+}
+
+.header-bar {
+    width: 100%;
+    background-color: black;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20px;
 }
 
 .container {
@@ -15,6 +35,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     height: 80%;
+    flex: 1;
+    overflow-x: hidden;
 }
 
 .left-side {
@@ -24,19 +46,10 @@ body {
     align-items: center;
 }
 
-.stylized-text {
-    font-size: 80px;
-    color: white;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    animation: fadeIn 3s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.left-image {
+    max-width: 200%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .right-side {
@@ -47,7 +60,7 @@ body {
 }
 
 .login-box {
-    background: rgba(255, 255, 255, 0.9);
+    background: none;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
@@ -62,8 +75,7 @@ body {
 }
 
 .header p {
-    font-size: 18px;
-    color: #000000;
+    color: #f76c00;
 }
 
 form {
@@ -73,14 +85,17 @@ form {
 
 label {
     margin-top: 10px;
-    color: #333;
+    color: #ffffff;
 }
 
-input[type="email"], input[type="password"] {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+input[type="email"],
+input[type="password"],
+button {
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
 }
 
 .options {
@@ -91,12 +106,8 @@ input[type="email"], input[type="password"] {
 }
 
 button {
-    margin-top: 20px;
-    padding: 10px;
     background-color: #f76c00;
     color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
 }
@@ -105,13 +116,68 @@ button:hover {
     background-color: #e55a00;
 }
 
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
 .social-login button {
-    margin-top: 10px;
     background-color: #ccc;
     color: black;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.social-login button img {
+    margin-right: 9px;
 }
 
 .social-login button:hover {
     background-color: #bbb;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px; /* Defina a largura desejada para o logo */
+    height: auto;
+    margin-left: 150px; /* Adiciona uma margem à direita do logo */
+}
+
+.social-fluxo {
+    margin-left: 20px; /* Adiciona uma margem à esquerda do texto "Social Fluxo" */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80%;
+    flex: 1;
+    overflow-x: hidden;
+}
+
+.login-text {
+    position: absolute;
+    top: 30%; /* Ajuste a posição vertical conforme necessário */
+    left: 34%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
